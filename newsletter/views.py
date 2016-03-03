@@ -8,10 +8,13 @@ from .forms import SignUpModelForm, ContactForm
 def home(request):
     title = 'Welcome'
     form = SignUpModelForm(request.POST or None)
+    # request と formの意味は？？
 
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
+
+        # ↑の意味は？？
 
     if request.user.is_authenticated():
         title = 'Hello %s' % (request.user)
@@ -40,6 +43,8 @@ def contact(request):
             form_email,
         )
         send_mail(subject, contact_message, from_email, to_email, fail_silently=True)
+
+        # ％の意味は？
 
     context = {
         'form': form,
