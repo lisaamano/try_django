@@ -7,5 +7,3 @@ class SignUpModelForm(forms.ModelForm):
     class Meta:
         model = SignUp
         fields = ['full_name', 'email']
-
-        
