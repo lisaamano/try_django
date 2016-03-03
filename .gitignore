@@ -72,3 +72,6 @@ node_modules/
 
 ​*/migrations/*​
 !*/migrations/__init__.py
+
+acountmanage.py
+acountmanage.pyc
